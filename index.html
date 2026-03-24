@@ -1,84 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast Eleven - Football Manager</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0D1117;
-      color: #E6EDF3;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-    h1 {
-      font-size: 32px;
-      font-weight: 900;
-      color: #FFD600;
-      margin-bottom: 8px;
-    }
-    .subtitle {
-      color: #8B949E;
-      font-size: 16px;
-      margin-bottom: 48px;
-    }
-    h2 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #4CAF50;
-      margin-bottom: 16px;
-      margin-top: 40px;
-    }
-    p {
-      color: #CDD5DE;
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-    a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .divider {
-      border: none;
-      border-top: 1px solid #30363D;
-      margin: 40px 0;
-    }
-    .footer {
-      color: #8B949E;
-      font-size: 13px;
-      margin-top: 48px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Eleven - Football Manager</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Fast Eleven</h1>
-    <p class="subtitle">A minimalist football management game for quick sessions.</p>
 
-    <h2>Privacy Policy</h2>
-    <p><strong>Last updated:</strong> March 13, 2026</p>
-    <p>Fast Eleven is a single-player offline game. The app does not collect, store, or share any personal data. All game data is stored locally on your device and is never transmitted to any server.</p>
-    <p>The app uses <a href="https://sentry.io/privacy/" target="_blank">Sentry</a> for anonymous crash reporting. Crash reports contain only technical information about the error (device model, OS version, stack trace) and do not include any personally identifiable information. No names, emails, locations, or usage data are collected.</p>
-    <p>The app does not use analytics, advertising, tracking, or any third-party services beyond crash reporting.</p>
-    <p>The app does not require an internet connection to function. No account or registration is needed.</p>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Fast Eleven</a>
+            <div class="nav-links">
+                <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+                <a href="support.html" data-i18n="nav.support">Support</a>
+                <div class="lang-switcher">
+                    <button data-lang="en" class="active" onclick="setLanguage('en')">EN</button>
+                    <span class="lang-separator">|</span>
+                    <button data-lang="pt" onclick="setLanguage('pt')">PT</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <hr class="divider">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fast Eleven</h1>
+                <p class="tagline" data-i18n="hero.tagline">A minimalist football management game for quick sessions.</p>
+                <div class="store-buttons">
+                    <!-- TODO: Replace # with actual App Store URL -->
+                    <a href="#" class="store-btn" id="app-store-btn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div class="store-text">
+                            <small data-i18n="store.apple.label">Download on the</small>
+                            <span data-i18n="store.apple.name">App Store</span>
+                        </div>
+                    </a>
+                    <!-- TODO: Replace # with actual Google Play URL -->
+                    <a href="#" class="store-btn" id="play-store-btn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92zm10.893 9.476l2.56-2.56 3.48 2.01c.63.36.63.93 0 1.3l-3.48 2.01-2.56-2.56-.01-.1.01-.1zm-1.41 1.42L4.38 21.42l8.71-5.03 0-.01.003.003-.003.003zm0-2.82L4.38 2.58l8.71 5.03.003-.003-.003.003v.01l0-.01z"/></svg>
+                        <div class="store-text">
+                            <small data-i18n="store.google.label">Get it on</small>
+                            <span data-i18n="store.google.name">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="phone-wrapper">
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <img src="screenshot.png" alt="Fast Eleven">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h2>Support</h2>
-    <p>If you encounter any issues or have feedback, please reach out:</p>
-    <p>Email: <a href="mailto:pedrovinicio@gmail.com">pedrovinicio@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/pedrovinicio/fast-eleven/issues" target="_blank">Report an issue</a></p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p data-i18n-html="footer.rights">&copy; 2026 Pedro Vinicio. All rights reserved.</p>
+    </footer>
 
-    <p class="footer">&copy; 2026 Pedro Vinicio. All rights reserved.</p>
-  </div>
+    <script src="i18n.js"></script>
 </body>
 </html>

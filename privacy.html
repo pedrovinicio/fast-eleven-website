@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Fast Eleven</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Fast Eleven</a>
+            <div class="nav-links">
+                <a href="privacy.html" class="active" data-i18n="nav.privacy">Privacy</a>
+                <a href="support.html" data-i18n="nav.support">Support</a>
+                <div class="lang-switcher">
+                    <button data-lang="en" class="active" onclick="setLanguage('en')">EN</button>
+                    <span class="lang-separator">|</span>
+                    <button data-lang="pt" onclick="setLanguage('pt')">PT</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container">
+            <h2 data-i18n="privacy.title">Privacy Policy</h2>
+            <p class="last-updated" data-i18n="privacy.updated">Last updated: March 13, 2026</p>
+            <p data-i18n="privacy.p1">Fast Eleven is a single-player offline game. The app does not collect, store, or share any personal data. All game data is stored locally on your device and is never transmitted to any server.</p>
+            <p data-i18n-html="privacy.p2">The app uses <a href="https://sentry.io/privacy/" target="_blank">Sentry</a> for anonymous crash reporting. Crash reports contain only technical information about the error (device model, OS version, stack trace) and do not include any personally identifiable information. No names, emails, locations, or usage data are collected.</p>
+            <p data-i18n="privacy.p3">The app does not use analytics, advertising, tracking, or any third-party services beyond crash reporting.</p>
+            <p data-i18n="privacy.p4">The app does not require an internet connection to function. No account or registration is needed.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p data-i18n-html="footer.rights">&copy; 2026 Pedro Vinicio. All rights reserved.</p>
+    </footer>
+
+    <script src="i18n.js"></script>
+</body>
+</html>
