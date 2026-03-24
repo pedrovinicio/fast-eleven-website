@@ -6,10 +6,6 @@ const translations = {
 
         // Hero
         'hero.tagline': 'A minimalist football management game for quick sessions.',
-        'store.apple.label': 'Download on the',
-        'store.apple.name': 'App Store',
-        'store.google.label': 'Get it on',
-        'store.google.name': 'Google Play',
 
         // Privacy
         'privacy.title': 'Privacy Policy',
@@ -28,9 +24,6 @@ const translations = {
 
         // Footer
         'footer.rights': '&copy; 2026 Pedro Vinicio. All rights reserved.',
-
-        // Phone placeholder
-        'phone.subtitle': 'Coming soon',
     },
     pt: {
         // Nav
@@ -39,10 +32,6 @@ const translations = {
 
         // Hero
         'hero.tagline': 'Um jogo minimalista de gestão de futebol para sessões rápidas.',
-        'store.apple.label': 'Baixar na',
-        'store.apple.name': 'App Store',
-        'store.google.label': 'Disponível no',
-        'store.google.name': 'Google Play',
 
         // Privacy
         'privacy.title': 'Política de Privacidade',
@@ -61,14 +50,14 @@ const translations = {
 
         // Footer
         'footer.rights': '&copy; 2026 Pedro Vinicio. Todos os direitos reservados.',
-
-        // Phone placeholder
-        'phone.subtitle': 'Em breve',
     }
 };
 
 function getLanguage() {
-    return localStorage.getItem('fast11-lang') || 'en';
+    var saved = localStorage.getItem('fast11-lang');
+    if (saved) return saved;
+    var browserLang = navigator.language || navigator.userLanguage || 'en';
+    return browserLang.toLowerCase().startsWith('pt') ? 'pt' : 'en';
 }
 
 function setLanguage(lang) {
@@ -94,6 +83,14 @@ function applyTranslations(lang) {
             el.innerHTML = t[key];
         }
     });
+
+    // Update Apple badge image locale
+    var appleBadge = document.querySelector('#app-store-btn img');
+    if (appleBadge) {
+        var locale = lang === 'pt' ? 'pt-br' : 'en-us';
+        appleBadge.src = 'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/' + locale + '?size=250x83';
+        appleBadge.alt = lang === 'pt' ? 'Baixar na App Store' : 'Download on the App Store';
+    }
 }
 
 function updateLangButtons(lang) {
