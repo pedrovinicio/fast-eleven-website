@@ -2,15 +2,18 @@
 
 The marketing and support website for [Fast Eleven](https://apps.apple.com/br/app/fast-eleven/id6760587437), a minimalist football management game for quick sessions.
 
-Live at: **[fast-eleven.web.app](https://fast-eleven.web.app)**
+Live at:
+
+- Firebase Hosting**[fast-eleven.web.app](https://fast-eleven.web.app)**
+- Oficial Website**[fast-eleven.com](https://fast-eleven.com)**
 
 ## Pages
 
-| Page | Description |
-|---|---|
-| `index.html` | Landing page with app store download links |
-| `privacy.html` | Privacy policy |
-| `support.html` | Support contact info |
+| Page           | Description                                |
+| -------------- | ------------------------------------------ |
+| `index.html`   | Landing page with app store download links |
+| `privacy.html` | Privacy policy                             |
+| `support.html` | Support contact info                       |
 
 ## Features
 
