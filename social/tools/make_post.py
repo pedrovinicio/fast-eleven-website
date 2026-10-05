@@ -1,7 +1,8 @@
 import sys, json
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 W,H=1080,1350
-ASSETS='/home/claude/fast-eleven/assets/images/'
+import os
+ASSETS=os.environ.get('FE_ASSETS','/home/claude/fast-eleven/assets/images/')
 F='/usr/share/fonts/opentype/inter/'
 def font(w,s): return ImageFont.truetype(F+f'Inter-{w}.otf',s)
 def wrap(d,text,f,maxw):
