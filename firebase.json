@@ -6,7 +6,8 @@
       ".firebaserc",
       "**/.*",
       "**/node_modules/**",
-      "public/**"
+      "public/**",
+      "social/**"
     ]
   }
 }
