@@ -4,7 +4,7 @@ Instructions for the weekly scheduled run that plans, creates and schedules @fas
 
 ## Fixed settings
 - Account: Metricool brand `blogId` **7239705** (Instagram `fast_eleven`), timezone `America/Recife`.
-- Cadence: **3 posts/week — Monday, Wednesday, Friday at 19:00** (America/Recife). Never schedule in the past; skip a slot that already has a post (check `getScheduledPosts` and `log.md`).
+- Cadence: **3 posts/week — Saturday 13:00, Sunday 13:00, Wednesday 16:00** (America/Recife). The weekly run (Fridays) fills every slot in the next 7 days: the coming Saturday, Sunday and Wednesday. Never schedule in the past; skip a slot that already has a post (check `getScheduledPosts` and `log.md`).
 - Language: **Portuguese (Brazil) only**.
 - Drive backup folder id: **1-gYlf1SI-JlVDHXuAorAqmy0mErwGSv1** ("Fast Eleven – Instagram Posts").
 - Repos: game code `pedrovinicio/fast-eleven` (read-only, never push), image hosting `pedrovinicio/fast-eleven-website` (`social/` only; never touch other files).
