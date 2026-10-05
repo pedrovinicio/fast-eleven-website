@@ -3,7 +3,8 @@
 Instructions for the weekly scheduled run that plans, creates and schedules @fast_eleven Instagram posts with no human in the loop.
 
 ## Fixed settings
-- Account: Metricool brand `blogId` **7239705** (Instagram `fast_eleven`), timezone `America/Recife`.
+- Account: Metricool brand `blogId` **7239705** (Instagram `fast_eleven` + Facebook Page "Fast Eleven"), timezone `America/Recife`.
+- **Every post goes to both Instagram and Facebook** (same image(s) and caption).
 - Cadence: **3 posts/week — Saturday 13:00, Sunday 13:00, Wednesday 16:00** (America/Recife). The weekly run (Fridays) fills every slot in the next 7 days: the coming Saturday, Sunday and Wednesday. Never schedule in the past; skip a slot that already has a post (check `getScheduledPosts` and `log.md`).
 - Language: **Portuguese (Brazil) only**.
 - Drive backup folder id: **1-gYlf1SI-JlVDHXuAorAqmy0mErwGSv1** ("Fast Eleven – Instagram Posts").
@@ -32,7 +33,7 @@ Maximise **reach** (people reached, new followers). Optimise for reach, shares a
    `python3 make_post.py '<json spec>' out.jpg` (carousel: spec with `"slides": [...]` → out-1.jpg, out-2.jpg…). Keys: `layout` (hero | stat | versus | list | card | quote — see the docstring at the top of the script), `theme` (dark | green | yellow), `bg` (a game image: pitch-bg, penalty-bg, home-hero, scoreboard-bg, stadium-seats-bg, tunnel-bg, locker-bg, bench-bg, select-bg, end-season-bg, job-offer-bg, fired-bg, share-bg, app-bg …png), `bg_y` (0–1 crop), `kicker` (NOVIDADE / VOCÊ SABIA? / SUA VEZ / DICA DO TÉCNICO / DESAFIO / VESTIÁRIO…), `headline` (≤ 9 words, Portuguese), `highlight` (a word/phrase of the headline; its line turns accent-coloured), `sub` (one short sentence); plus `number` (stat), `options` [A, B] (versus), `items` [3–5 strings] (list), `footer` (quote).
    Open the rendered JPG and check it: text legible, nothing cut off, no overlap. Re-render if not.
 5. Save to `social/posts/<YYYY-MM-DD>-<slug>/image.jpg` (carousel: `image-1.jpg`, `image-2.jpg`…) + `caption.txt`, append rows to `log.md`, commit and push to `main` (only `social/`). Public URL: `https://raw.githubusercontent.com/pedrovinicio/fast-eleven-website/main/social/posts/<dir>/image.jpg` — confirm it returns 200 before scheduling.
-6. Schedule each with Metricool `createScheduledPost` (carousel = several URLs in `media`, in order, with one alt text each): providers instagram, `instagramData.type` POST, `draft` false, `autoPublish` true, media = the raw URL, `mediaAltText` in Portuguese, `isAiGenerated` false.
+6. Schedule each with Metricool `createScheduledPost` (carousel = several URLs in `media`, in order, with one alt text each): providers `[{"network":"instagram"},{"network":"facebook"}]`, `instagramData.type` POST, `facebookData` `{"type":"POST"}`, `draft` false, `autoPublish` true, media = the raw URL, `mediaAltText` in Portuguese, `isAiGenerated` false.
 7. Backup: create one Google Doc per post in the Drive folder titled `<YYYY-MM-DD> — <Tema> (Instagram)` containing publish time, image link, Metricool planner URL and the full caption.
 8. Update the uuid column in `log.md`, commit, push.
 9. Finish with a short summary (in English) of the 3 scheduled posts: date, topic, first line of caption, planner link. Report problems plainly.
