@@ -5,3 +5,6 @@ One line per post, newest last. Weekly runs read this to avoid repeating topics.
 | Date (publish) | Slug | Type | Topic | Metricool uuid |
 | :-- | :-- | :-- | :-- | :-- |
 | 2026-10-05 15:31 | 2026-10-07-penaltis | Novidade · hero/dark/penalty-bg | Pênaltis no jogo — você escolhe o cobrador | -4411311480531761304 |
+| 2026-10-07 16:00 | 2026-10-07-folego | Novidade · carousel card+list+quote/green/bench-bg,pitch-bg,tunnel-bg | Fôlego dos jogadores (stamina) e substituições | UUID_W |
+| 2026-10-10 13:00 | 2026-10-10-best-xi | Engajamento · versus/dark/stadium-seats-bg | 4-3-3 ou BEST XI? | UUID_S |
+| 2026-10-11 13:00 | 2026-10-11-conquistas | Você sabia? · stat/yellow/end-season-bg | 42 conquistas na carreira | UUID_D |
