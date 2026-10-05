@@ -52,5 +52,6 @@ Maximise **reach** (people reached, new followers). Optimise for reach, shares a
 
 ## Failure handling
 - If Metricool rejects a post, retry once; otherwise skip it and report.
+- At the start of each run, check last week's posts with `getScheduledPosts` (extendedRange): any with status ERROR (e.g. Instagram's transient "media is not ready") → reschedule it to a free slot in the coming week (or 5 min from now if still timely) and report it.
 - If a repo can't be reached, still post evergreen content from this playbook's fact list and report the access issue.
 - Never delete or edit posts the run didn't create.

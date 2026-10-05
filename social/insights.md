@@ -13,4 +13,4 @@ Maintained by the weekly run. Learnings drive posting times, hashtags and topic 
 ## Results
 | Publish | Weekday | Hour | Type | Topic | Set | Reach | Views | Shares | Saves | Follows |
 | :-- | :-- | :-- | :-- | :-- | :-- | --: | --: | --: | --: | --: |
-| 2026-10-05 | Mon | 15:26 | Novidade | Pênaltis | A | | | | | |
+| 2026-10-05 | Mon | 15:31 | Novidade | Pênaltis | A | | | | | |
