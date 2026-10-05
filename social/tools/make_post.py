@@ -90,10 +90,22 @@ def brand(im, d, th, kicker, x=M, y=M):
 
 
 def headline(d, th, text, hi, f, x, y, maxw, align='left', lh=1.05):
+    words = text.split()
+    hw = hi.lower().split() if hi else []
+    marked = [False] * len(words)
+    for i in range(len(words) - len(hw) + 1):
+        if hw and [w.lower().strip('.,!?:;') for w in words[i:i + len(hw)]] == [h.strip('.,!?:;') for h in hw]:
+            for j in range(i, i + len(hw)):
+                marked[j] = True
+    space = d.textlength(' ', font=f)
+    idx = 0
     for line in wrap(d, text, f, maxw):
-        color = th['accent'] if hi and hi.lower() in line.lower() else th['fg']
+        n = len(line.split())
         lx = x if align == 'left' else x + (maxw - d.textlength(line, font=f)) / 2
-        d.text((lx, y), line, font=f, fill=color)
+        for w, m in zip(words[idx:idx + n], marked[idx:idx + n]):
+            d.text((lx, y), w, font=f, fill=th['accent'] if m else th['fg'])
+            lx += d.textlength(w, font=f) + space
+        idx += n
         y += int(f.size * lh)
     return y
 
@@ -217,19 +229,21 @@ def layout_quote(s, th):
     im = darken(art(s.get('bg', 'bench-bg.png'), W, H, s.get('bg_y', 0.5), blur=10), th['bg'], start=0.0, strength=170)
     d = ImageDraw.Draw(im)
     brand(im, d, th, s.get('kicker', 'Dica do técnico'))
-    box = (M, 300, W - M, H - 200)
-    d.rounded_rectangle(box, 44, fill=th['panel'], outline=th['accent'], width=3)
-    d.text((M + 50, 300 - 10), '“', font=font('Black', 220), fill=th['accent'])
     inner = W - 2 * M - 100
-    hf = fit_font(d, s['headline'], 'Black', 76, inner, 5)
-    sf = font('Medium', 38)
-    total = block_height(d, s['headline'], hf, inner, 1.08) + (30 + block_height(d, s.get('sub'), sf, inner, 1.35) if s.get('sub') else 0)
-    y = box[1] + 210 + max(0, (box[3] - box[1] - 260 - total) // 3)
-    y = headline(d, th, s['headline'], s.get('highlight'), hf, M + 50, y, inner, lh=1.08)
+    hf = fit_font(d, s['headline'], 'Black', 84, inner, 5)
+    sf = font('Medium', 40)
+    total = block_height(d, s['headline'], hf, inner, 1.08)
+    if s.get('sub'):
+        total += 30 + block_height(d, s['sub'], sf, inner, 1.35)
+    box_h = total + 260
+    top = (H - box_h) // 2 + 40
+    d.rounded_rectangle((M, top, W - M, top + box_h), 44, fill=th['panel'], outline=th['accent'], width=3)
+    d.text((M + 50, top - 10), '“', font=font('Black', 220), fill=th['accent'])
+    y = headline(d, th, s['headline'], s.get('highlight'), hf, M + 50, top + 170, inner, lh=1.08)
     if s.get('sub'):
         para(d, th['muted'], s['sub'], sf, M + 50, y + 30, inner)
     if s.get('footer'):
-        para(d, th['accent'], s['footer'], font('Bold', 32), M, H - 150, W - 2 * M, align='center')
+        para(d, th['accent'], s['footer'], font('Bold', 32), M, top + box_h + 50, W - 2 * M, align='center')
     return im
 
 
