@@ -9,8 +9,12 @@ Instructions for the weekly scheduled run that plans, creates and schedules @fas
 - Drive backup folder id: **1-gYlf1SI-JlVDHXuAorAqmy0mErwGSv1** ("Fast Eleven – Instagram Posts").
 - Repos: game code `pedrovinicio/fast-eleven` (read-only, never push), image hosting `pedrovinicio/fast-eleven-website` (`social/` only; never touch other files).
 
+## Goal
+Maximise **reach** (people reached, new followers). Optimise for reach, shares and saves first, likes second.
+
 ## Each run
-1. Clone both repos (shallow). Read `social/log.md` here.
+0. **Review performance first** — see "Learning loop" below. Its decisions (times, hashtags, topic mix, formats) override the defaults in this file for this run.
+1. Clone both repos (shallow). Read `social/log.md` and `social/insights.md` here.
 2. Find news: in `fast-eleven`, look at commits since the last run (`git fetch --depth=200` then `git log --since`), plus `ROADMAP/*/_features_*.md` for features marked **Done** that have not been posted yet (check log). Only announce features that are Done/shipped — never "Spec" or "Placeholder" ones.
 3. Plan the week's 3 posts with variety. Mix:
    - **Novidade** — a shipped feature not yet posted (max 1–2/week; only if real news exists).
@@ -26,8 +30,23 @@ Instructions for the weekly scheduled run that plans, creates and schedules @fas
 8. Update the uuid column in `log.md`, commit, push.
 9. Finish with a short summary (in English) of the 3 scheduled posts: date, topic, first line of caption, planner link. Report problems plainly.
 
+## Learning loop (every run, before planning)
+1. Pull data for all posts since the account started (or the last 90 days) with Metricool `getAnalyticsDataByMetrics` (brandId 7239705):
+   - posts: `IGPO02` date+time, `IGPO03` content, `IGPO07` type, `IGPO14` reach, `IGPO28` views, `IGPO12` interactions, `IGPO27` shares, `IGPO15` saved, `IGPO08` comments, `IGPO29` follows.
+   - hashtags: `IGHT01` hashtag, `IGHT03` posts, `IGHT06` views, `IGHT04` likes, `IGHT05` comments.
+   Also call `getBestTimeToPostByNetwork` (instagram, next 7 days, America/Recife).
+2. Match each post to its `log.md` row (by date/caption) and record per-post results in `insights.md` → "Results" table (date, weekday, hour, type, topic, hashtag set, reach, views, shares, saves, follows).
+3. Decide, and write the reasoning to `insights.md` → "Current decisions" (dated):
+   - **Times**: defaults are Sat 13:00, Sun 13:00, Wed 16:00 (Pedro's choice). Only move a slot after ≥ 6 posts of data, and only when Metricool best-time data or results clearly favour another hour **on the same day**. Move by ≤ 3 h per week, keep within 10:00–22:00. Do not change the days themselves — recommend it in the summary instead if the data says so.
+   - **Hashtags**: keep `#FastEleven` always. Rotate 2–3 candidate sets (5–8 tags, mixing big generic tags, mid-size niche tags like #JogosDeFutebol, and topic tags); after each set has ≥ 2 posts, favour the set with best reach per post and replace the weakest tags with new candidates. Track sets by letter in insights.
+   - **Topics/formats**: give more slots to the content types (Novidade / Você sabia? / Engajamento) and visual styles with the highest reach and shares; keep at least 1 slot/week experimental.
+   - Change **at most two variables per week** so results stay attributable. With too little data, say so and keep defaults.
+4. Commit `insights.md` with the posts.
+5. In the final summary add a 2–3 line "What I learned / what I changed" section, and a recommendation if something needs Pedro (e.g. "Reels would likely triple reach — want me to start making short videos?").
+
 ## Caption style
 - Portuguese, energetic but not cringe; football-manager vocabulary (escalação, acesso, rebaixamento, mercado, vestiário).
+- Hashtags: use the set chosen in `insights.md` → Current decisions.
 - Structure: hook line with 1–2 emojis → 2–3 short sentences explaining → a question to drive comments 👇 → "📲 Fast Eleven na App Store e Google Play. Link na bio." → 5–8 hashtags, always `#FastEleven`, plus from: #FutebolManager #ManagerDeFutebol #JogoDeFutebol #Elifoot #JogosMobile #JogosDeFutebol #Brasileirão + one topic tag.
 - Never invent features, prices ("grátis"), download numbers, release dates or promotions. Never mention real players' names or club crests/brands.
 
