@@ -15,8 +15,8 @@ Maintained by the weekly run. Learnings drive posting times, hashtags and topic 
 ## Results
 | Publish | Weekday | Hour | Type | Topic | Set | Reach | Views | Shares | Saves | Follows |
 | :-- | :-- | :-- | :-- | :-- | :-- | --: | --: | --: | --: | --: |
-| 2026-08-20 | Thu | 14:16 | Novidade (carousel, manual launch post) | Atualização V3 (5 novidades) | other | 246 | 482 | 0 | 1 | 3 |
-| 2026-10-05 | Mon | 15:31 | Novidade | Pênaltis | A | 5 | 12 | 0 | 0 | 0 |
+| 2026-08-20 | Thu | 14:16 | Novidade (carousel, manual launch post) | Atualização V3 (5 novidades) | other | 246 | 482 | 2 | 0 | 3 |
+| 2026-10-05 | Mon | 15:31 | Novidade | Pênaltis | A | 5 | 12 | 1 | 0 | 0 |
 | 2026-10-07 | Wed | 16:00 | Novidade (carousel) | Fôlego | A | 12 | 32 | 0 | 0 | 0 |
 | 2026-10-10 | Sat | 13:00 | Engajamento | BEST XI | B | | | | | |
 | 2026-10-11 | Sun | 13:00 | Você sabia? | Conquistas | C | | | | | |
