@@ -23,12 +23,12 @@ Record the post slug next to an image when it's used, so the feed doesn't repeat
 | File | Used in |
 | :-- | :-- |
 | `01_penalti.png` | — |
-| `02_tatica.png` | — |
+| `02_tatica.png` | 2026-10-14-ranking-treinadores |
 | `03_transferencia.png` | — |
 | `04_vestiario.png` | — |
 | `05_entrada_em_campo.png` | — |
 | `06_trofeu.png` | — |
-| `07_promocao.png` | — |
+| `07_promocao.png` | 2026-10-14-ranking-treinadores |
 | `08_chute.png` | — |
 | `09_torcida.png` | — |
 | `10_estadio.png` | — |
