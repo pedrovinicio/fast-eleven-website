@@ -10,6 +10,7 @@ Layouts ("layout" key):
   list      title + 3-5 numbered items (tips, facts, steps)
   card      solid colour block with a big headline, art strip at the bottom
   quote     "Dica do técnico" style tip inside a framed card
+bg: a game asset name (e.g. pitch-bg.png) or a library image ("library/06_trofeu.png", see social/library/README.md).
 Common keys: bg, bg_y, kicker, theme (dark | green | yellow), headline, highlight, sub.
 """
 import json
@@ -21,6 +22,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 W, H = 1080, 1350
 M = 80
 ASSETS = os.environ.get('FE_ASSETS', '/home/claude/fast-eleven/assets/images/')
+LIBRARY = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')  # bg "library/<file>" -> social/library/
 FONTS = '/usr/share/fonts/opentype/inter/'
 
 THEMES = {
@@ -58,7 +60,8 @@ def fit_font(d, text, weight, start, maxw, max_lines):
 
 
 def art(name, w, h, y=0.5, blur=0):
-    im = Image.open(ASSETS + name).convert('RGB')
+    path = os.path.join(LIBRARY, name) if name.startswith('library/') else ASSETS + name
+    im = Image.open(path).convert('RGB')
     s = max(w / im.width, h / im.height)
     im = im.resize((int(im.width * s) + 1, int(im.height * s) + 1))
     ox = (im.width - w) // 2

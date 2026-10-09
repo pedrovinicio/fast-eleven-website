@@ -26,6 +26,7 @@ Maximise **reach** (people reached, new followers). Optimise for reach, shares a
    - The 3 posts of a week use **3 different layouts**, and never the same layout as the previous post.
    - Rotate themes (`dark`, `green`, `yellow`) — max 2 dark per week; at least one `green` or `yellow` every week.
    - Never reuse a background image used in the last 3 posts.
+   - **Prefer Pedro's image library** (`social/library/`, see its README for what each photo shows and fits) over the in-game assets when one matches the topic — use at least one library image per week. Pass it as `"bg": "library/<file>"` and add the post slug to the library README's usage log.
    - At least **one carousel every 2 weeks** (2–5 slides via `"slides"`): e.g. slide 1 hook (hero/card), slides 2–4 one tip/fact each (list/stat/quote), last slide call-to-action. Carousels get re-shown in feeds and tend to reach more people.
    - Match layout to content: `stat` → a number fact (13 ligas, 32 clubes, 14 rodadas, 11 formações, 18 conquistas…); `versus` → A-vs-B polls; `list` → tips/steps; `quote` → "Dica do técnico"/vestiário moments; `card` → challenges/bold statements; `hero` → feature announcements with the matching game art.
    - Record `layout/theme/bg` for each post in the log's Type column (e.g. `Novidade · hero/dark/penalty-bg`).
