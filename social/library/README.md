@@ -25,10 +25,10 @@ Record the post slug next to an image when it's used, so the feed doesn't repeat
 | `01_penalti.png` | — |
 | `02_tatica.png` | 2026-10-14-ranking-treinadores |
 | `03_transferencia.png` | — |
-| `04_vestiario.png` | — |
-| `05_entrada_em_campo.png` | — |
+| `04_vestiario.png` | 2026-10-21-moral-do-tecnico |
+| `05_entrada_em_campo.png` | 2026-10-17-multiplas-carreiras |
 | `06_trofeu.png` | — |
 | `07_promocao.png` | 2026-10-14-ranking-treinadores |
 | `08_chute.png` | — |
-| `09_torcida.png` | — |
-| `10_estadio.png` | — |
+| `09_torcida.png` | 2026-10-21-moral-do-tecnico |
+| `10_estadio.png` | 2026-10-18-qual-liga |
