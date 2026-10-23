@@ -12,3 +12,6 @@ One line per post, newest last. Weekly runs read this to avoid repeating topics.
 | 2026-10-17 13:00 | 2026-10-17-multiplas-carreiras | Novidade · stat/green/library-05_entrada_em_campo | Múltiplas carreiras (até 20 saves) | 67290589639691799 |
 | 2026-10-18 13:00 | 2026-10-18-qual-liga | Engajamento · card/yellow/library-10_estadio | Qual liga você começa? (13 ligas) | -4916951331213786839 |
 | 2026-10-21 16:00 | 2026-10-21-moral-do-tecnico | Você sabia? · carousel hero+list+quote/dark/library-04_vestiario,locker-bg,library-09_torcida | Moral do técnico (força, propostas, demissão) | -1813784468824241001 |
+| 2026-10-24 13:00 | 2026-10-24-compartilhar-conquistas | Novidade · card/yellow/library-06_trofeu | Compartilhar conquistas (card de story) | TBD |
+| 2026-10-25 13:00 | 2026-10-25-copa-nacional | Você sabia? · carousel stat+list+card/green/library-01_penalti,pitch-bg,home-hero | Copa Nacional (40 clubes, mata-mata, pênaltis) | TBD |
+| 2026-10-28 16:00 | 2026-10-28-calendario | Novidade · carousel hero+list+quote/dark/library-08_chute,tunnel-bg,bench-bg | Calendário do clube (resultados, próximos jogos, Copa) | TBD |
