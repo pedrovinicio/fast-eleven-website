@@ -15,3 +15,6 @@ One line per post, newest last. Weekly runs read this to avoid repeating topics.
 | 2026-10-24 13:00 | 2026-10-24-compartilhar-conquistas | Novidade · card/yellow/library-06_trofeu | Compartilhar conquistas (card de story) | -3813363062339055639 |
 | 2026-10-25 13:00 | 2026-10-25-copa-nacional | Você sabia? · carousel stat+list+card/green/library-01_penalti,pitch-bg,home-hero | Copa Nacional (40 clubes, mata-mata, pênaltis) | 952423617971964465 |
 | 2026-10-28 16:00 | 2026-10-28-calendario | Novidade · carousel hero+list+quote/dark/library-08_chute,tunnel-bg,bench-bg | Calendário do clube (resultados, próximos jogos, Copa) | 1721637645076546400 |
+| 2026-10-31 13:00 | 2026-10-31-vender-ou-segurar | Engajamento · versus/green/library-03_transferencia | Vender ou segurar o craque? (preço acompanha a nota) | 1965027670609643922 |
+| 2026-11-01 13:00 | 2026-11-01-notas-dinamicas | Você sabia? · stat/yellow/library-05_entrada_em_campo | Notas dinâmicas (+1 na vitória, artilheiro protegido, teto da divisão) | -2527412893303159805 |
+| 2026-11-04 16:00 | 2026-11-04-cartoes-e-lesoes | Você sabia? · carousel hero+list+quote/dark/fired-bg,locker-bg,scoreboard-bg | Cartões e lesões (suspensões, 1–4 jogos fora, −1 a −7 de nota) | 2827444033655754334 |

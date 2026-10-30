@@ -24,9 +24,9 @@ Record the post slug next to an image when it's used, so the feed doesn't repeat
 | :-- | :-- |
 | `01_penalti.png` | 2026-10-25-copa-nacional |
 | `02_tatica.png` | 2026-10-14-ranking-treinadores |
-| `03_transferencia.png` | — |
+| `03_transferencia.png` | 2026-10-31-vender-ou-segurar |
 | `04_vestiario.png` | 2026-10-21-moral-do-tecnico |
-| `05_entrada_em_campo.png` | 2026-10-17-multiplas-carreiras |
+| `05_entrada_em_campo.png` | 2026-10-17-multiplas-carreiras, 2026-11-01-notas-dinamicas |
 | `06_trofeu.png` | 2026-10-24-compartilhar-conquistas |
 | `07_promocao.png` | 2026-10-14-ranking-treinadores |
 | `08_chute.png` | 2026-10-28-calendario |
