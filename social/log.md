@@ -18,3 +18,6 @@ One line per post, newest last. Weekly runs read this to avoid repeating topics.
 | 2026-10-31 13:00 | 2026-10-31-vender-ou-segurar | Engajamento · versus/green/library-03_transferencia | Vender ou segurar o craque? (preço acompanha a nota) | 1965027670609643922 |
 | 2026-11-01 13:00 | 2026-11-01-notas-dinamicas | Você sabia? · stat/yellow/library-05_entrada_em_campo | Notas dinâmicas (+1 na vitória, artilheiro protegido, teto da divisão) | -2527412893303159805 |
 | 2026-11-04 16:00 | 2026-11-04-cartoes-e-lesoes | Você sabia? · carousel hero+list+quote/dark/fired-bg,locker-bg,scoreboard-bg | Cartões e lesões (suspensões, 1–4 jogos fora, −1 a −7 de nota) | 2827444033655754334 |
+| 2026-11-07 13:00 | 2026-11-07-acesso-e-rebaixamento | Você sabia? · stat/yellow/library-07_promocao | Acesso e rebaixamento (8 clubes, 14 rodadas, 2 sobem / 2 caem) | |
+| 2026-11-08 13:00 | 2026-11-08-velocidade-do-jogo | Engajamento · versus/dark/library-08_chute | Velocidade do jogo (Hiper 10s a Lento 60s) | |
+| 2026-11-11 16:00 | 2026-11-11-sair-da-divisao-4 | Dica do técnico · carousel hero+list+quote+card/green/library-02_tatica,pitch-bg,tunnel-bg,stadium-seats-bg | 5 dicas para sair da Divisão 4 | |
