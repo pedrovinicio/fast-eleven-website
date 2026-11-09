@@ -1,5 +1,7 @@
 # Fast Eleven — Instagram automation playbook
 
+> **Retired 2026-11-09.** The account is now @manguegames and covers all of Pedro's games. The current playbook, image tool and log live in `pedrovinicio/pedrovinicio.github.io/social/`. This file is kept for history only.
+
 Instructions for the weekly scheduled run that plans, creates and schedules @fast_eleven Instagram posts with no human in the loop.
 
 ## Fixed settings
